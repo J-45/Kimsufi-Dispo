@@ -5,11 +5,9 @@ import re
 import urllib.request
 
 def get(url):
-    with urllib.request.urlopen(main_url) as r:
-        return r.read().decode('utf-8')
+    return urllib.request.urlopen(url).read().decode('utf-8')
 
 server_model    = "KS-1"
-data_ref        = ""
 main_url        = "https://www.kimsufi.com/fr/serveurs.xml"
 json_url        = "https://www.ovh.com/engine/api/dedicated/server/availabilities?country=fr"
 
