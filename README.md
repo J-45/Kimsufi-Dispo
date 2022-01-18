@@ -1,2 +1,1 @@
-# Kimsufi-Notif
-Disponibilité des serveurs kimsufi
+# Disponibilité des serveurs kimsufi
