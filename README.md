@@ -1,3 +1,3 @@
 # Disponibilité des serveurs kimsufi
 ## TODO
-  - notif & delay min antre deux notifcation
+  - notif & delay min entre deux notifcation
