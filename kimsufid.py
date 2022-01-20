@@ -15,13 +15,13 @@ DATA_REF        = re.findall("data-ref=\"(\w+)\" [^>]+>\s+<td><[^>]+>"+SRV_MODEL
 last_time       = 0
 
 def send_sms(usr, key, txt):
-    DATA = {'user': usr, 'pass': key, 'msg': txt}
-    JSONDATA = json.dumps(DATA).encode("utf8")
-    req = request.Request("https://smsapi.free-mobile.fr/sendmsg")
+    DATA        = {'user': usr, 'pass': key, 'msg': txt}
+    JSONDATA    = json.dumps(DATA).encode("utf8")
+    req         = request.Request("https://smsapi.free-mobile.fr/sendmsg")
     req.add_header('Content-Type', 'application/json; charset=utf-8')
     req.add_header('Content-Length', len(JSONDATA))
-    RES = request.urlopen(req, JSONDATA)
-    PAGE = RES.read().decode("utf8")
+    RES         = request.urlopen(req, JSONDATA)
+    PAGE        = RES.read().decode("utf8")
     if RES.getcode() != 200:
         print(RES.getcode())
     return PAGE
